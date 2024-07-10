@@ -2494,7 +2494,7 @@ color: black;
  </widget>
  <resources>
   <include location="../../../Users/aderbal.silva/OneDrive - unionit.com.br/Workspace/WorkSpace/Exemplos/Pyside6/School/resources.qrc"/>
-  <include location="../../WorkSpace/Exemplos/Pyside6/School/resources.qrc"/>
+  <include location="resources.qrc"/>
  </resources>
  <connections>
   <connection>
