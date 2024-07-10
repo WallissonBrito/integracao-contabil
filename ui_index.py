@@ -354,13 +354,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_9.addWidget(self.label_10)
 
-        self.comboBox_7 = QComboBox(self.layoutWidget1)
-        self.comboBox_7.addItem("")
-        self.comboBox_7.addItem("")
-        self.comboBox_7.setObjectName(u"comboBox_7")
-        self.comboBox_7.setMinimumSize(QSize(187, 35))
-        self.comboBox_7.setMaximumSize(QSize(187, 35))
-        self.comboBox_7.setStyleSheet(u"QComboBox{\n"
+        self.comboBox_file_delimiter = QComboBox(self.layoutWidget1)
+        self.comboBox_file_delimiter.addItem("")
+        self.comboBox_file_delimiter.addItem("")
+        self.comboBox_file_delimiter.setObjectName(u"comboBox_7")
+        self.comboBox_file_delimiter.setMinimumSize(QSize(187, 35))
+        self.comboBox_file_delimiter.setMaximumSize(QSize(187, 35))
+        self.comboBox_file_delimiter.setStyleSheet(u"QComboBox{\n"
 "	border:2px solid white;\n"
 "	border-radius: 8px;\n"
 "	padding:1px 18px 1px 3px;\n"
@@ -373,7 +373,7 @@ class Ui_MainWindow(object):
 "	selection-background-color:#2980B9;\n"
 "}")
 
-        self.verticalLayout_9.addWidget(self.comboBox_7)
+        self.verticalLayout_9.addWidget(self.comboBox_file_delimiter)
 
 
         self.horizontalLayout_7.addLayout(self.verticalLayout_9)
@@ -388,11 +388,11 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.label_11)
 
-        self.upload_btn_5 = QPushButton(self.layoutWidget1)
-        self.upload_btn_5.setObjectName(u"upload_btn_5")
-        self.upload_btn_5.setMinimumSize(QSize(150, 32))
-        self.upload_btn_5.setMaximumSize(QSize(150, 32))
-        self.upload_btn_5.setStyleSheet(u"QPushButton{\n"
+        self.upload_btn = QPushButton(self.layoutWidget1)
+        self.upload_btn.setObjectName(u"upload_btn_5")
+        self.upload_btn.setMinimumSize(QSize(150, 32))
+        self.upload_btn.setMaximumSize(QSize(150, 32))
+        self.upload_btn.setStyleSheet(u"QPushButton{\n"
 "	background-color: #34D481;\n"
 "	color:white;\n"
 "	border: none;\n"
@@ -401,7 +401,7 @@ class Ui_MainWindow(object):
 "	font-size: 15px;\n"
 "}")
 
-        self.verticalLayout_11.addWidget(self.upload_btn_5)
+        self.verticalLayout_11.addWidget(self.upload_btn)
 
 
         self.horizontalLayout_7.addLayout(self.verticalLayout_11)
@@ -1116,7 +1116,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.exit_btn.toggled.connect(MainWindow.close)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1148,11 +1148,11 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Column_7", None));
         self.label.setText(QCoreApplication.translate("MainWindow", u"Selecione o delimitador dos dados e clique em carregar", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Delimitador", None))
-        self.comboBox_7.setItemText(0, QCoreApplication.translate("MainWindow", u"V\u00edrgula", None))
-        self.comboBox_7.setItemText(1, QCoreApplication.translate("MainWindow", u"Ponto e V\u00edrgula", None))
+        self.comboBox_file_delimiter.setItemText(0, QCoreApplication.translate("MainWindow", u"V\u00edrgula", None))
+        self.comboBox_file_delimiter.setItemText(1, QCoreApplication.translate("MainWindow", u"Ponto e V\u00edrgula", None))
 
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Arquivo", None))
-        self.upload_btn_5.setText(QCoreApplication.translate("MainWindow", u"Carregar", None))
+        self.upload_btn.setText(QCoreApplication.translate("MainWindow", u"Carregar", None))
         self.title_page_load_data_page.setText(QCoreApplication.translate("MainWindow", u"Carregar Dados", None))
         self.label_load_data_page.setText(QCoreApplication.translate("MainWindow", u"arquivo.csv", None))
         self.next_btn_update_column_page.setText(QCoreApplication.translate("MainWindow", u"Avan\u00e7ar", None))
