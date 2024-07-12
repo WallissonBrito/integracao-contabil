@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>997</width>
-    <height>753</height>
+    <width>1002</width>
+    <height>752</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -76,7 +76,7 @@ QPushButton {
        <height>741</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
+     <layout class="QVBoxLayout" name="left_frame_verticalLayout">
       <property name="topMargin">
        <number>20</number>
       </property>
@@ -84,9 +84,9 @@ QPushButton {
        <number>25</number>
       </property>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+       <layout class="QHBoxLayout" name="horizontalLayout_icon">
         <item>
-         <spacer name="horizontalSpacer_2">
+         <spacer name="horizontalSpacer_left_icon_2">
           <property name="orientation">
            <enum>Qt::Orientation::Horizontal</enum>
           </property>
@@ -99,17 +99,23 @@ QPushButton {
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="label_5">
+         <widget class="QLabel" name="icon_left_frame">
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
           <property name="text">
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap resource="../../../Users/aderbal.silva/OneDrive - unionit.com.br/Workspace/WorkSpace/Exemplos/Pyside6/School/resources.qrc">:/newPrefix/icons/financessmall2.png</pixmap>
+           <pixmap resource="resources.qrc">:/newPrefix/icons/financessmall2.png</pixmap>
           </property>
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer">
+         <spacer name="horizontalSpacer_left_icon">
           <property name="orientation">
            <enum>Qt::Orientation::Horizontal</enum>
           </property>
@@ -132,7 +138,7 @@ QPushButton {
          <number>20</number>
         </property>
         <item>
-         <widget class="QPushButton" name="load_data_page_btn">
+         <widget class="QPushButton" name="settings_page_btn">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -162,7 +168,7 @@ QPushButton:checked {
 </string>
           </property>
           <property name="text">
-           <string>Carregar Dados</string>
+           <string>Configuração</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -173,7 +179,7 @@ QPushButton:checked {
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="upddate_column_page_btn">
+         <widget class="QPushButton" name="load_file_page_btn">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -203,7 +209,7 @@ QPushButton:checked {
 </string>
           </property>
           <property name="text">
-           <string>Alterar Colunas</string>
+           <string>Carregar Arquivo</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -214,7 +220,7 @@ QPushButton:checked {
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="add_data_page_btn">
+         <widget class="QPushButton" name="update_data_page_btn">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -244,7 +250,7 @@ QPushButton:checked {
 </string>
           </property>
           <property name="text">
-           <string>Inserir Período</string>
+           <string>ALterar Dados</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -255,7 +261,7 @@ QPushButton:checked {
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="upddate_accounts_page_btn">
+         <widget class="QPushButton" name="update_accounts_page_btn">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -339,7 +345,7 @@ QPushButton:checked {
        </layout>
       </item>
       <item>
-       <spacer name="verticalSpacer">
+       <spacer name="verticalSpacer_left_frame">
         <property name="orientation">
          <enum>Qt::Orientation::Vertical</enum>
         </property>
@@ -444,9 +450,9 @@ color: black;
 </string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
-    <widget class="QWidget" name="a_load_data_page">
+    <widget class="QWidget" name="a_settings_page">
      <property name="maximumSize">
       <size>
        <width>801</width>
@@ -456,23 +462,23 @@ color: black;
      <property name="styleSheet">
       <string notr="true"/>
      </property>
-     <widget class="QWidget" name="widget_load_data_page" native="true">
+     <widget class="QWidget" name="settings_page_widget" native="true">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
         <width>801</width>
-        <height>741</height>
+        <height>731</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true"/>
       </property>
-      <widget class="QWidget" name="botton_frame_widget_load_data_page" native="true">
+      <widget class="QWidget" name="settings_page_botton_frame" native="true">
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>660</y>
+         <y>640</y>
          <width>801</width>
          <height>70</height>
         </rect>
@@ -503,15 +509,15 @@ color: black;
           <x>0</x>
           <y>0</y>
           <width>801</width>
-          <height>71</height>
+          <height>61</height>
          </rect>
         </property>
-        <layout class="QHBoxLayout" name="hLayout_bottom_frame_4">
+        <layout class="QHBoxLayout" name="settings_botton_frame_hLayout">
          <property name="rightMargin">
           <number>10</number>
          </property>
          <item>
-          <spacer name="horizontalSpacer_7">
+          <spacer name="settings_horizontal_Spacer">
            <property name="orientation">
             <enum>Qt::Orientation::Horizontal</enum>
            </property>
@@ -524,7 +530,867 @@ color: black;
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="next_btn_load_data_page">
+          <widget class="QPushButton" name="save_btn_load_data_page">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #34D481;
+	color:white;
+	border: none;
+	border-radius: 8px;
+	font-weight:bold;
+	font-size: 15px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Salvar</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="settings_page_file_widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>70</y>
+         <width>801</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(170, 255, 255);</string>
+       </property>
+       <widget class="QLabel" name="file_info_label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>353</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Informações do arquivo</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>60</y>
+          <width>189</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="type_file_verticalLayout">
+         <item>
+          <widget class="QLabel" name="type_file_label">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Tipo de arquivo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="type_file_comboBox">
+           <property name="minimumSize">
+            <size>
+             <width>187</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>187</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox{
+	border:2px solid white;
+	border-radius: 8px;
+	padding:1px 18px 1px 3px;
+	background-color:black;
+	color:white;
+	height: 35px;
+	padding-left: 15px;
+	font-weight:bold;
+	selection-background-color:#2980B9;
+	selection-background-color:#2980B9;
+}</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>.csv</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>60</y>
+          <width>189</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="encoding_verticalLayout">
+         <item>
+          <widget class="QLabel" name="encoding_label">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Enconding</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="encoding_comboBox_file">
+           <property name="minimumSize">
+            <size>
+             <width>187</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>187</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox{
+	border:2px solid white;
+	border-radius: 8px;
+	padding:1px 18px 1px 3px;
+	background-color:black;
+	color:white;
+	height: 35px;
+	padding-left: 15px;
+	font-weight:bold;
+	selection-background-color:#2980B9;
+	selection-background-color:#2980B9;
+}</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>UTF-8</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string> ISO-8859-1</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_info_settings">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>1</y>
+          <width>353</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Entre com as informações dos dados que você esta inserindo.</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>60</y>
+          <width>189</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="demiliter_verticalLayout">
+         <item>
+          <widget class="QLabel" name="delimiter_info_label">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Delimitador</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="delimiter_comboBox_file">
+           <property name="minimumSize">
+            <size>
+             <width>187</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>187</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox{
+	border:2px solid white;
+	border-radius: 8px;
+	padding:1px 18px 1px 3px;
+	background-color:black;
+	color:white;
+	height: 35px;
+	padding-left: 15px;
+	font-weight:bold;
+	selection-background-color:#2980B9;
+	selection-background-color:#2980B9;
+}</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>Vírgula</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Ponto e Vírgula</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="top_frame_widget_load_data_page" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>801</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <widget class="QWidget" name="layoutWidget_9">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>801</width>
+          <height>62</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="settings_horizontalLayout">
+         <item>
+          <widget class="QLabel" name="settings_page_title">
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>20</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Configuração</string>
+           </property>
+           <property name="margin">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="settings_horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>348</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="settings_page_period_widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>210</y>
+         <width>801</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(170, 255, 255);</string>
+       </property>
+       <widget class="QLabel" name="period_info_label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>353</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Informações do Périodo</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_16">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>40</y>
+          <width>189</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="year_verticalLayout">
+         <item>
+          <widget class="QLabel" name="year_label">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>17</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>17</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Ano</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="year_lineEdit">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>Digite o ano</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_21">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>40</y>
+          <width>189</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="month_verticalLayout">
+         <item>
+          <widget class="QLabel" name="month_label_select">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>17</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Mês de Exercício</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="month_comboBox_select">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>187</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox{
+	border:2px solid white;
+	border-radius: 8px;
+	padding:1px 18px 1px 3px;
+	background-color:black;
+	color:white;
+	height: 35px;
+	padding-left: 15px;
+	font-weight:bold;
+	selection-background-color:#2980B9;
+}</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>SELECIONE O MÊS</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>6</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>7</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>8</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>9</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>10</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>11</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>12</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_15">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>189</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="period_verticalLayout">
+         <item>
+          <widget class="QLabel" name="period_label">
+           <property name="minimumSize">
+            <size>
+             <width>187</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>187</width>
+             <height>17</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Período dos dados</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="period_comboBox">
+           <property name="minimumSize">
+            <size>
+             <width>187</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>187</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox{
+	border:2px solid white;
+	border-radius: 8px;
+	padding:1px 18px 1px 3px;
+	background-color:black;
+	color:white;
+	height: 35px;
+	padding-left: 15px;
+	font-weight:bold;
+	selection-background-color:#2980B9;
+}</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>SELECIONE  O PERIODO</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Mensal</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Anual</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Trimestral</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="settings_page_info_company_widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>330</y>
+         <width>801</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(170, 255, 255);</string>
+       </property>
+       <widget class="QLabel" name="company_label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>353</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Informações da Empresa</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_25">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>40</y>
+          <width>252</width>
+          <height>62</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="cnpj_verticalLayout">
+         <item>
+          <widget class="QLabel" name="cnpj_label">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>CNPJ</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="cnpj_lineEdit">
+           <property name="minimumSize">
+            <size>
+             <width>250</width>
+             <height>33</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>250</width>
+             <height>33</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_26">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>252</width>
+          <height>62</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="name_company_verticalLayout">
+         <item>
+          <widget class="QLabel" name="names_company_label">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Nome da Empresa</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="names_company_lineEdit">
+           <property name="minimumSize">
+            <size>
+             <width>250</width>
+             <height>33</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>250</width>
+             <height>33</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="b_upload_file_page">
+     <property name="maximumSize">
+      <size>
+       <width>801</width>
+       <height>731</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="upload_file_central_widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>801</width>
+        <height>741</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <widget class="QWidget" name="upload_file_botton_frame" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>660</y>
+         <width>801</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <widget class="QWidget" name="layoutWidget_17">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>801</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="upload_file_botton_frame_hLayout">
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <spacer name="upload_file_horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>598</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="upload_file_next_btn">
            <property name="minimumSize">
             <size>
              <width>150</width>
@@ -555,7 +1421,7 @@ color: black;
         </layout>
        </widget>
       </widget>
-      <widget class="QWidget" name="table_frame_widget_load_data_page" native="true">
+      <widget class="QWidget" name="upload_file_page_table" native="true">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -564,7 +1430,10 @@ color: black;
          <height>431</height>
         </rect>
        </property>
-       <widget class="QTableWidget" name="tableWidget_load_data_page">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <widget class="QTableWidget" name="upload_file_table">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -616,7 +1485,7 @@ color: black;
         </column>
        </widget>
       </widget>
-      <widget class="QWidget" name="buttons_widget_load_data_page" native="true">
+      <widget class="QWidget" name="upload_file_page_buttons" native="true">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -626,147 +1495,49 @@ color: black;
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">background-color: rgb(170, 255, 255);</string>
        </property>
-       <widget class="QWidget" name="layoutWidget">
+       <widget class="QLabel" name="upload_file_page_label">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>801</width>
-          <height>141</height>
+          <x>10</x>
+          <y>2</y>
+          <width>470</width>
+          <height>18</height>
          </rect>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <property name="leftMargin">
-          <number>10</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Selecione o delimitador dos dados e clique em carregar</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_7">
-           <property name="spacing">
-            <number>10</number>
-           </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>10</number>
-           </property>
-           <property name="rightMargin">
-            <number>400</number>
-           </property>
-           <property name="bottomMargin">
-            <number>20</number>
-           </property>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_9">
-             <item>
-              <widget class="QLabel" name="label_10">
-               <property name="font">
-                <font>
-                 <family>Arial</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(0, 0, 0);</string>
-               </property>
-               <property name="text">
-                <string>Delimitador</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QComboBox" name="comboBox_file_delimiter">
-               <property name="minimumSize">
-                <size>
-                 <width>187</width>
-                 <height>35</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>187</width>
-                 <height>35</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QComboBox{
-	border:2px solid white;
-	border-radius: 8px;
-	padding:1px 18px 1px 3px;
-	background-color:black;
-	color:white;
-	height: 35px;
-	padding-left: 15px;
-	font-weight:bold;
-	selection-background-color:#2980B9;
-	selection-background-color:#2980B9;
-}</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>Vírgula</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Ponto e Vírgula</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_11">
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <item>
-              <widget class="QLabel" name="label_11">
-               <property name="font">
-                <font>
-                 <family>Arial</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(0, 0, 0);</string>
-               </property>
-               <property name="text">
-                <string>Arquivo</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="upload_btn">
-               <property name="minimumSize">
-                <size>
-                 <width>150</width>
-                 <height>32</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>150</width>
-                 <height>32</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QPushButton{
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Click em inserir para carregar o arquivo e visualize a tabela.</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="upload_file_btn">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>42</y>
+          <width>150</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
 	background-color: #34D481;
 	color:white;
 	border: none;
@@ -774,20 +1545,13 @@ color: black;
 	font-weight:bold;
 	font-size: 15px;
 }</string>
-               </property>
-               <property name="text">
-                <string>Carregar</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </item>
-        </layout>
+        </property>
+        <property name="text">
+         <string>Inserir </string>
+        </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="top_frame_widget_load_data_page" native="true">
+      <widget class="QWidget" name="upload_file_page_top_frame" native="true">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -816,7 +1580,7 @@ color: black;
        <property name="styleSheet">
         <string notr="true"/>
        </property>
-       <widget class="QWidget" name="layoutWidget_9">
+       <widget class="QWidget" name="layoutWidget_19">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -825,9 +1589,9 @@ color: black;
           <height>62</height>
          </rect>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <layout class="QHBoxLayout" name="upload_file_page_horizontalLayout">
          <item>
-          <widget class="QLabel" name="title_page_load_data_page">
+          <widget class="QLabel" name="upload_file_page_title">
            <property name="font">
             <font>
              <family>Arial Black</family>
@@ -839,7 +1603,7 @@ color: black;
             <string notr="true">color: rgb(0, 0, 0);</string>
            </property>
            <property name="text">
-            <string>Carregar Dados</string>
+            <string>Carregar Arquivo</string>
            </property>
            <property name="margin">
             <number>10</number>
@@ -847,7 +1611,7 @@ color: black;
           </widget>
          </item>
          <item>
-          <spacer name="horizontalSpacer_8">
+          <spacer name="upload_file_page_horizontalSpacer">
            <property name="orientation">
             <enum>Qt::Orientation::Horizontal</enum>
            </property>
@@ -859,30 +1623,12 @@ color: black;
            </property>
           </spacer>
          </item>
-         <item>
-          <widget class="QLabel" name="label_load_data_page">
-           <property name="font">
-            <font>
-             <pointsize>11</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgb(0, 0, 0);</string>
-           </property>
-           <property name="text">
-            <string>arquivo.csv</string>
-           </property>
-           <property name="margin">
-            <number>20</number>
-           </property>
-          </widget>
-         </item>
         </layout>
        </widget>
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="b_update_column_page">
+    <widget class="QWidget" name="c_update_data_page">
      <property name="maximumSize">
       <size>
        <width>801</width>
@@ -1358,7 +2104,7 @@ color: black;
             <string notr="true">color: rgb(0, 0, 0);</string>
            </property>
            <property name="text">
-            <string>Alterar Colunas</string>
+            <string>Alterar Dados</string>
            </property>
            <property name="margin">
             <number>10</number>
@@ -1401,1100 +2147,14 @@ color: black;
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="c_add_data_page">
-     <property name="maximumSize">
-      <size>
-       <width>801</width>
-       <height>731</height>
-      </size>
-     </property>
-     <widget class="QWidget" name="central_widget_add_data_page" native="true">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>801</width>
-        <height>741</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <widget class="QWidget" name="botton_frame_widget_add_data_page" native="true">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>660</y>
-         <width>801</width>
-         <height>70</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>70</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>13</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <widget class="QWidget" name="layoutWidget_11">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>801</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="hLayout_bottom_frame_add_data_page">
-         <property name="rightMargin">
-          <number>10</number>
-         </property>
-         <item>
-          <spacer name="horizontalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>598</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="next_btn_add_data_page">
-           <property name="minimumSize">
-            <size>
-             <width>150</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>150</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton{
-	background-color: #34D481;
-	color:white;
-	border: none;
-	border-radius: 8px;
-	font-weight:bold;
-	font-size: 15px;
-}</string>
-           </property>
-           <property name="text">
-            <string>Avançar</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="table_frame_widget_add_data_page" native="true">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>220</y>
-         <width>801</width>
-         <height>431</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <widget class="QTableWidget" name="tableWidget_add_data_page">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>801</width>
-          <height>431</height>
-         </rect>
-        </property>
-        <attribute name="horizontalHeaderMinimumSectionSize">
-         <number>32</number>
-        </attribute>
-        <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>110</number>
-        </attribute>
-        <column>
-         <property name="text">
-          <string>Column_1</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_2</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_3</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_4</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_5</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_6</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_7</string>
-         </property>
-        </column>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="buttons_widget_add_data_page" native="true">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>70</y>
-         <width>801</width>
-         <height>141</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <widget class="QWidget" name="layoutWidget_3">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>801</width>
-          <height>143</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_5">
-         <property name="leftMargin">
-          <number>10</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="label_3">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>43</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>43</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Entre com o período dos dados, mês e ano de referência</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_9">
-           <property name="spacing">
-            <number>6</number>
-           </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>10</number>
-           </property>
-           <property name="rightMargin">
-            <number>10</number>
-           </property>
-           <property name="bottomMargin">
-            <number>20</number>
-           </property>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_8">
-             <item>
-              <widget class="QLabel" name="label_select_period">
-               <property name="minimumSize">
-                <size>
-                 <width>187</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>187</width>
-                 <height>17</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Arial</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(0, 0, 0);</string>
-               </property>
-               <property name="text">
-                <string>Período dos dados</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QComboBox" name="comboBox_select_period">
-               <property name="minimumSize">
-                <size>
-                 <width>187</width>
-                 <height>35</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>187</width>
-                 <height>35</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QComboBox{
-	border:2px solid white;
-	border-radius: 8px;
-	padding:1px 18px 1px 3px;
-	background-color:black;
-	color:white;
-	height: 35px;
-	padding-left: 15px;
-	font-weight:bold;
-	selection-background-color:#2980B9;
-}</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>SELECIONE  O PERIODO</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Anual</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Trimestral</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_13">
-             <item>
-              <widget class="QLabel" name="label_select_month">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>17</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Arial</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(0, 0, 0);</string>
-               </property>
-               <property name="text">
-                <string>Mês de Referência</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QComboBox" name="comboBox_select_month">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>35</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>187</width>
-                 <height>35</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QComboBox{
-	border:2px solid white;
-	border-radius: 8px;
-	padding:1px 18px 1px 3px;
-	background-color:black;
-	color:white;
-	height: 35px;
-	padding-left: 15px;
-	font-weight:bold;
-	selection-background-color:#2980B9;
-}</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>SELECIONE O MÊS</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>3</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>6</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>9</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>12</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_15">
-             <item>
-              <widget class="QLabel" name="label_year">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>17</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>17</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Arial</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(0, 0, 0);</string>
-               </property>
-               <property name="text">
-                <string>Ano</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_year">
-               <property name="minimumSize">
-                <size>
-                 <width>150</width>
-                 <height>35</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>150</width>
-                 <height>35</height>
-                </size>
-               </property>
-               <property name="placeholderText">
-                <string>Digite o ano</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Orientation::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_21">
-             <property name="bottomMargin">
-              <number>2</number>
-             </property>
-             <item>
-              <widget class="QLabel" name="label_add_period">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>17</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>17</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Arial</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="add_period_btn">
-               <property name="minimumSize">
-                <size>
-                 <width>150</width>
-                 <height>36</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>150</width>
-                 <height>36</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QPushButton{
-	background-color: #34D481;
-	color:white;
-	border: none;
-	border-radius: 8px;
-	font-weight:bold;
-	font-size: 15px;
-}</string>
-               </property>
-               <property name="text">
-                <string>Inserir </string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="top_frame_widget_add_data_page" native="true">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>801</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>61</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>61</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>13</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <widget class="QWidget" name="layoutWidget_13">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>801</width>
-          <height>62</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_10">
-         <item>
-          <widget class="QLabel" name="title_page_add_data_page">
-           <property name="font">
-            <font>
-             <family>Arial Black</family>
-             <pointsize>20</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgb(0, 0, 0);</string>
-           </property>
-           <property name="text">
-            <string>Inserir Período</string>
-           </property>
-           <property name="margin">
-            <number>10</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_add_data_page">
-           <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>348</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QLabel" name="file_name_label_add_data_page">
-           <property name="font">
-            <font>
-             <pointsize>11</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgb(0, 0, 0);</string>
-           </property>
-           <property name="text">
-            <string>arquivo.csv</string>
-           </property>
-           <property name="margin">
-            <number>20</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="d_apdate_accounts">
-     <property name="maximumSize">
-      <size>
-       <width>801</width>
-       <height>731</height>
-      </size>
-     </property>
-     <widget class="QWidget" name="central_widget_update_accounts_page" native="true">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>801</width>
-        <height>741</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <widget class="QWidget" name="botton_frame_widget_update_accounts_page" native="true">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>660</y>
-         <width>801</width>
-         <height>70</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>70</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>13</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <widget class="QWidget" name="layoutWidget_17">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>801</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="hLayout_bottom_frame_update_accounts_page">
-         <property name="rightMargin">
-          <number>10</number>
-         </property>
-         <item>
-          <spacer name="horizontalSpacer_10">
-           <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>598</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="next_btn_update_accounts_page">
-           <property name="minimumSize">
-            <size>
-             <width>150</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>150</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton{
-	background-color: #34D481;
-	color:white;
-	border: none;
-	border-radius: 8px;
-	font-weight:bold;
-	font-size: 15px;
-}</string>
-           </property>
-           <property name="text">
-            <string>Avançar</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="table_frame_widget_update_accounts_page" native="true">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>220</y>
-         <width>801</width>
-         <height>431</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <widget class="QTableWidget" name="tableWidget_update_accounts_page">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>801</width>
-          <height>431</height>
-         </rect>
-        </property>
-        <attribute name="horizontalHeaderMinimumSectionSize">
-         <number>32</number>
-        </attribute>
-        <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>110</number>
-        </attribute>
-        <column>
-         <property name="text">
-          <string>Column_1</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_2</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_3</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_4</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_5</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_6</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Column_7</string>
-         </property>
-        </column>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="buttons_widget_update_accounts_page" native="true">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>70</y>
-         <width>801</width>
-         <height>141</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <widget class="QWidget" name="layoutWidget_18">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>1</y>
-          <width>801</width>
-          <height>141</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_17">
-         <property name="leftMargin">
-          <number>10</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="label_update_accounts_page">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Digite o nome e o cnpj da empresa. Para editar as contas, clique no ícone em azul.</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_13">
-           <property name="spacing">
-            <number>10</number>
-           </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>10</number>
-           </property>
-           <property name="rightMargin">
-            <number>10</number>
-           </property>
-           <property name="bottomMargin">
-            <number>20</number>
-           </property>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_18">
-             <item>
-              <widget class="QLabel" name="label_names_company">
-               <property name="font">
-                <font>
-                 <family>Arial</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(0, 0, 0);</string>
-               </property>
-               <property name="text">
-                <string>Nome da Empresa</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_names_company">
-               <property name="minimumSize">
-                <size>
-                 <width>250</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>250</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_19">
-             <item>
-              <widget class="QLabel" name="label_cnpj">
-               <property name="font">
-                <font>
-                 <family>Arial</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(0, 0, 0);</string>
-               </property>
-               <property name="text">
-                <string>CNPJ</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_cnpj">
-               <property name="minimumSize">
-                <size>
-                 <width>250</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>250</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_4">
-             <property name="orientation">
-              <enum>Qt::Orientation::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_20">
-             <item>
-              <widget class="QLabel" name="label_add_name_cnpj">
-               <property name="minimumSize">
-                <size>
-                 <width>150</width>
-                 <height>17</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>150</width>
-                 <height>17</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Arial</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="indent">
-                <number>-1</number>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="add_name_cnpj_btn">
-               <property name="minimumSize">
-                <size>
-                 <width>150</width>
-                 <height>36</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>36</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QPushButton{
-	background-color: #34D481;
-	color:white;
-	border: none;
-	border-radius: 8px;
-	font-weight:bold;
-	font-size: 15px;
-}</string>
-               </property>
-               <property name="text">
-                <string>Inserir </string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="top_frame_widget_update_accounts_page" native="true">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>801</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>61</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>61</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>13</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <widget class="QWidget" name="layoutWidget_19">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>801</width>
-          <height>62</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_14">
-         <item>
-          <widget class="QLabel" name="title_page_update_accounts_page">
-           <property name="font">
-            <font>
-             <family>Arial Black</family>
-             <pointsize>20</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgb(0, 0, 0);</string>
-           </property>
-           <property name="text">
-            <string>Alterar Contas Contábeis</string>
-           </property>
-           <property name="margin">
-            <number>10</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_update_accounts_page">
-           <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>348</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QLabel" name="file_name_label_update_accounts_page">
-           <property name="font">
-            <font>
-             <pointsize>11</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgb(0, 0, 0);</string>
-           </property>
-           <property name="text">
-            <string>arquivo.csv</string>
-           </property>
-           <property name="margin">
-            <number>20</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </widget>
-     </widget>
-    </widget>
     <widget class="QWidget" name="e_exportation_page"/>
    </widget>
   </widget>
  </widget>
  <resources>
-  <include location="../../../Users/aderbal.silva/OneDrive - unionit.com.br/Workspace/WorkSpace/Exemplos/Pyside6/School/resources.qrc"/>
   <include location="resources.qrc"/>
+  <include location="resources.qrc"/>
+  <include location="../../../Users/aderbal.silva/OneDrive - unionit.com.br/Workspace/WorkSpace/Exemplos/Pyside6/School/resources.qrc"/>
  </resources>
  <connections>
   <connection>
@@ -2508,7 +2168,7 @@ color: black;
      <y>718</y>
     </hint>
     <hint type="destinationlabel">
-     <x>-28</x>
+     <x>0</x>
      <y>722</y>
     </hint>
    </hints>
