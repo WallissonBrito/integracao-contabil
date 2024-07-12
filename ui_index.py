@@ -119,12 +119,12 @@ class Ui_MainWindow(object):
 
         self.vLayout_btns_page.addWidget(self.load_data_page_btn)
 
-        self.upddate_column_page_btn = QPushButton(self.layoutWidget)
-        self.upddate_column_page_btn.setObjectName(u"upddate_column_page_btn")
-        self.upddate_column_page_btn.setMinimumSize(QSize(0, 30))
-        self.upddate_column_page_btn.setMaximumSize(QSize(16777215, 30))
-        self.upddate_column_page_btn.setFont(font)
-        self.upddate_column_page_btn.setStyleSheet(u"QPushButton:hover {\n"
+        self.update_column_page_btn = QPushButton(self.layoutWidget)
+        self.update_column_page_btn.setObjectName(u"upddate_column_page_btn")
+        self.update_column_page_btn.setMinimumSize(QSize(0, 30))
+        self.update_column_page_btn.setMaximumSize(QSize(16777215, 30))
+        self.update_column_page_btn.setFont(font)
+        self.update_column_page_btn.setStyleSheet(u"QPushButton:hover {\n"
 "	color:#12B298;\n"
 "}\n"
 "QPushButton:checked {\n"
@@ -132,17 +132,17 @@ class Ui_MainWindow(object):
 "	background-color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.upddate_column_page_btn.setCheckable(True)
-        self.upddate_column_page_btn.setAutoExclusive(True)
+        self.update_column_page_btn.setCheckable(True)
+        self.update_column_page_btn.setAutoExclusive(True)
 
-        self.vLayout_btns_page.addWidget(self.upddate_column_page_btn)
+        self.vLayout_btns_page.addWidget(self.update_column_page_btn)
 
-        self.add_data_page_btn = QPushButton(self.layoutWidget)
-        self.add_data_page_btn.setObjectName(u"add_data_page_btn")
-        self.add_data_page_btn.setMinimumSize(QSize(0, 30))
-        self.add_data_page_btn.setMaximumSize(QSize(16777215, 30))
-        self.add_data_page_btn.setFont(font)
-        self.add_data_page_btn.setStyleSheet(u"QPushButton:hover {\n"
+        self.add_period_page_btn = QPushButton(self.layoutWidget)
+        self.add_period_page_btn.setObjectName(u"add_data_page_btn")
+        self.add_period_page_btn.setMinimumSize(QSize(0, 30))
+        self.add_period_page_btn.setMaximumSize(QSize(16777215, 30))
+        self.add_period_page_btn.setFont(font)
+        self.add_period_page_btn.setStyleSheet(u"QPushButton:hover {\n"
 "	color:#12B298;\n"
 "}\n"
 "QPushButton:checked {\n"
@@ -150,17 +150,17 @@ class Ui_MainWindow(object):
 "	background-color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.add_data_page_btn.setCheckable(True)
-        self.add_data_page_btn.setAutoExclusive(True)
+        self.add_period_page_btn.setCheckable(True)
+        self.add_period_page_btn.setAutoExclusive(True)
 
-        self.vLayout_btns_page.addWidget(self.add_data_page_btn)
+        self.vLayout_btns_page.addWidget(self.add_period_page_btn)
 
-        self.upddate_accounts_page_btn = QPushButton(self.layoutWidget)
-        self.upddate_accounts_page_btn.setObjectName(u"upddate_accounts_page_btn")
-        self.upddate_accounts_page_btn.setMinimumSize(QSize(0, 30))
-        self.upddate_accounts_page_btn.setMaximumSize(QSize(16777215, 30))
-        self.upddate_accounts_page_btn.setFont(font)
-        self.upddate_accounts_page_btn.setStyleSheet(u"QPushButton:hover {\n"
+        self.update_accounts_page_btn = QPushButton(self.layoutWidget)
+        self.update_accounts_page_btn.setObjectName(u"upddate_accounts_page_btn")
+        self.update_accounts_page_btn.setMinimumSize(QSize(0, 30))
+        self.update_accounts_page_btn.setMaximumSize(QSize(16777215, 30))
+        self.update_accounts_page_btn.setFont(font)
+        self.update_accounts_page_btn.setStyleSheet(u"QPushButton:hover {\n"
 "	color:#12B298;\n"
 "}\n"
 "QPushButton:checked {\n"
@@ -168,10 +168,10 @@ class Ui_MainWindow(object):
 "	background-color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.upddate_accounts_page_btn.setCheckable(True)
-        self.upddate_accounts_page_btn.setAutoExclusive(True)
+        self.update_accounts_page_btn.setCheckable(True)
+        self.update_accounts_page_btn.setAutoExclusive(True)
 
-        self.vLayout_btns_page.addWidget(self.upddate_accounts_page_btn)
+        self.vLayout_btns_page.addWidget(self.update_accounts_page_btn)
 
         self.exportation_page_btn = QPushButton(self.layoutWidget)
         self.exportation_page_btn.setObjectName(u"exportation_page_btn")
@@ -916,10 +916,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_10.addWidget(self.file_name_label_add_data_page)
 
         self.stackedWidget.addWidget(self.c_add_data_page)
-        self.d_apdate_accounts = QWidget()
-        self.d_apdate_accounts.setObjectName(u"d_apdate_accounts")
-        self.d_apdate_accounts.setMaximumSize(QSize(801, 731))
-        self.central_widget_update_accounts_page = QWidget(self.d_apdate_accounts)
+        self.d_update_accounts = QWidget()
+        self.d_update_accounts.setObjectName(u"d_apdate_accounts")
+        self.d_update_accounts.setMaximumSize(QSize(801, 731))
+        self.central_widget_update_accounts_page = QWidget(self.d_update_accounts)
         self.central_widget_update_accounts_page.setObjectName(u"central_widget_update_accounts_page")
         self.central_widget_update_accounts_page.setGeometry(QRect(0, 0, 801, 741))
         self.central_widget_update_accounts_page.setStyleSheet(u"")
@@ -1107,7 +1107,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_14.addWidget(self.file_name_label_update_accounts_page)
 
-        self.stackedWidget.addWidget(self.d_apdate_accounts)
+        self.stackedWidget.addWidget(self.d_update_accounts)
         self.e_exportation_page = QWidget()
         self.e_exportation_page.setObjectName(u"e_exportation_page")
         self.stackedWidget.addWidget(self.e_exportation_page)
@@ -1126,9 +1126,9 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Integra\u00e7\u00e3o de Dados Cont\u00e1beis", None))
         self.label_5.setText("")
         self.load_data_page_btn.setText(QCoreApplication.translate("MainWindow", u"Carregar Dados", None))
-        self.upddate_column_page_btn.setText(QCoreApplication.translate("MainWindow", u"Alterar Colunas", None))
-        self.add_data_page_btn.setText(QCoreApplication.translate("MainWindow", u"Inserir Per\u00edodo", None))
-        self.upddate_accounts_page_btn.setText(QCoreApplication.translate("MainWindow", u"Alterar Contas Cont\u00e1beis", None))
+        self.update_column_page_btn.setText(QCoreApplication.translate("MainWindow", u"Alterar Colunas", None))
+        self.add_period_page_btn.setText(QCoreApplication.translate("MainWindow", u"Inserir Per\u00edodo", None))
+        self.update_accounts_page_btn.setText(QCoreApplication.translate("MainWindow", u"Alterar Contas Cont\u00e1beis", None))
         self.exportation_page_btn.setText(QCoreApplication.translate("MainWindow", u"Exportar Dados", None))
         self.exit_btn.setText(QCoreApplication.translate("MainWindow", u"Sair", None))
         self.next_btn_load_data_page.setText(QCoreApplication.translate("MainWindow", u"Avan\u00e7ar", None))
