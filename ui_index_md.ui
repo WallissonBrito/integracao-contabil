@@ -409,7 +409,7 @@ color: black;
 </string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="a_settings_page">
      <property name="maximumSize">
@@ -1578,7 +1578,7 @@ color: black;
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_8">
              <item>
-              <widget class="QLabel" name="label_select_account_2">
+              <widget class="QLabel" name="label_select_account">
                <property name="minimumSize">
                 <size>
                  <width>187</width>
@@ -1606,7 +1606,7 @@ color: black;
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="comboBox_select_account_2">
+              <widget class="QComboBox" name="comboBox_select_account">
                <property name="minimumSize">
                 <size>
                  <width>187</width>
@@ -1644,7 +1644,7 @@ color: black;
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_11">
              <item>
-              <widget class="QLabel" name="label_select_desc_account_2">
+              <widget class="QLabel" name="label_select_desc_account">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -1672,7 +1672,7 @@ color: black;
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="comboBox_select_desc_account_2">
+              <widget class="QComboBox" name="comboBox_select_desc_account">
                <property name="minimumSize">
                 <size>
                  <width>187</width>
@@ -1710,7 +1710,7 @@ color: black;
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_9">
              <item>
-              <widget class="QLabel" name="label_select_value_2">
+              <widget class="QLabel" name="label_select_value">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -1738,7 +1738,7 @@ color: black;
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="comboBox_select_value_2">
+              <widget class="QComboBox" name="comboBox_select_value">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -2008,7 +2008,7 @@ color: black;
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="next_btn_update_column_page">
+          <widget class="QPushButton" name="next_btn_update_data_page">
            <property name="minimumSize">
             <size>
              <width>150</width>
@@ -2043,392 +2043,385 @@ color: black;
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>110</y>
+         <y>70</y>
          <width>801</width>
-         <height>541</height>
+         <height>591</height>
         </rect>
        </property>
-       <widget class="QTableWidget" name="tableWidget_update_column_page">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
           <width>801</width>
-          <height>541</height>
+          <height>591</height>
          </rect>
         </property>
-        <property name="maximumSize">
-         <size>
-          <width>801</width>
-          <height>541</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <bold>false</bold>
-         </font>
-        </property>
-        <attribute name="horizontalHeaderVisible">
-         <bool>true</bool>
-        </attribute>
-        <attribute name="horizontalHeaderCascadingSectionResizes">
-         <bool>false</bool>
-        </attribute>
-        <attribute name="horizontalHeaderMinimumSectionSize">
-         <number>205</number>
-        </attribute>
-        <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>205</number>
-        </attribute>
-        <row>
-         <property name="text">
-          <string>Balanço Patrimonial</string>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <property name="spacing">
+          <number>20</number>
          </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
+         <property name="leftMargin">
+          <number>5</number>
          </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>Demonstração do Resultado</string>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string/>
-         </property>
-        </row>
-        <row>
-         <property name="text">
-          <string>Fluxo de Caixa</string>
-         </property>
-        </row>
-        <column>
-         <property name="text">
-          <string>Código da Conta</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Descrição da Conta</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Alterar Código</string>
-         </property>
-        </column>
-        <item row="0" column="0">
-         <property name="text">
-          <string>1</string>
-         </property>
-        </item>
-        <item row="0" column="1">
-         <property name="text">
-          <string>Ativo</string>
-         </property>
-        </item>
-        <item row="0" column="2">
-         <property name="text">
-          <string/>
-         </property>
-        </item>
-        <item row="1" column="0">
-         <property name="text">
-          <string>1.01</string>
-         </property>
-        </item>
-        <item row="1" column="1">
-         <property name="text">
-          <string>Ativo Circulante</string>
-         </property>
-        </item>
-        <item row="1" column="2">
-         <property name="text">
-          <string/>
-         </property>
-        </item>
-        <item row="2" column="0">
-         <property name="text">
-          <string>1.01.01</string>
-         </property>
-        </item>
-        <item row="2" column="1">
-         <property name="text">
-          <string>Caixa e Equivalente de Caixa</string>
-         </property>
-        </item>
-        <item row="3" column="0">
-         <property name="text">
-          <string>1.01.02</string>
-         </property>
-        </item>
-        <item row="3" column="1">
-         <property name="text">
-          <string>Aplicação Financeira</string>
-         </property>
-        </item>
-        <item row="4" column="0">
-         <property name="text">
-          <string>1.01.04</string>
-         </property>
-        </item>
-        <item row="4" column="1">
-         <property name="text">
-          <string>Estoque</string>
-         </property>
-        </item>
-        <item row="5" column="0">
-         <property name="text">
-          <string>1.02</string>
-         </property>
-        </item>
-        <item row="5" column="1">
-         <property name="text">
-          <string>Ativo Não Circulante</string>
-         </property>
-        </item>
-        <item row="6" column="0">
-         <property name="text">
-          <string>1.02.01</string>
-         </property>
-        </item>
-        <item row="6" column="1">
-         <property name="text">
-          <string>Ativo Realizável a Long Prazo</string>
-         </property>
-        </item>
-        <item row="7" column="0">
-         <property name="text">
-          <string>2</string>
-         </property>
-        </item>
-        <item row="7" column="1">
-         <property name="text">
-          <string>Passivo</string>
-         </property>
-        </item>
-        <item row="7" column="2">
-         <property name="text">
-          <string/>
-         </property>
-        </item>
-        <item row="8" column="0">
-         <property name="text">
-          <string>2.01</string>
-         </property>
-        </item>
-        <item row="8" column="1">
-         <property name="text">
-          <string>Passivo Circulante</string>
-         </property>
-        </item>
-        <item row="9" column="0">
-         <property name="text">
-          <string>2.01.04</string>
-         </property>
-        </item>
-        <item row="9" column="1">
-         <property name="text">
-          <string>Empréstimo a Curto Prazo</string>
-         </property>
-        </item>
-        <item row="10" column="0">
-         <property name="text">
-          <string>2.02</string>
-         </property>
-        </item>
-        <item row="10" column="1">
-         <property name="text">
-          <string>Passivo Não Circulante</string>
-         </property>
-        </item>
-        <item row="11" column="0">
-         <property name="text">
-          <string>2.02.01</string>
-         </property>
-        </item>
-        <item row="11" column="1">
-         <property name="text">
-          <string>Empréstimo a longo Prazo</string>
-         </property>
-        </item>
-        <item row="12" column="0">
-         <property name="text">
-          <string>2.03</string>
-         </property>
-        </item>
-        <item row="12" column="1">
-         <property name="text">
-          <string>Patrimônio Líquido</string>
-         </property>
-        </item>
-        <item row="13" column="0">
-         <property name="text">
-          <string>3.01</string>
-         </property>
-        </item>
-        <item row="13" column="1">
-         <property name="text">
-          <string>Receita Líquida</string>
-         </property>
-        </item>
-        <item row="14" column="0">
-         <property name="text">
-          <string>3.02</string>
-         </property>
-        </item>
-        <item row="14" column="1">
-         <property name="text">
-          <string>Custos</string>
-         </property>
-        </item>
-        <item row="15" column="0">
-         <property name="text">
-          <string>3.03</string>
-         </property>
-        </item>
-        <item row="15" column="1">
-         <property name="text">
-          <string>Lucro Bruto</string>
-         </property>
-        </item>
-        <item row="16" column="0">
-         <property name="text">
-          <string>3.05</string>
-         </property>
-        </item>
-        <item row="16" column="1">
-         <property name="text">
-          <string>Resultado Antes dos Tributos</string>
-         </property>
-        </item>
-        <item row="17" column="0">
-         <property name="text">
-          <string>3.08</string>
-         </property>
-        </item>
-        <item row="17" column="1">
-         <property name="text">
-          <string>Imposto de Renda e Contribuição Social Sobre o Lucro</string>
-         </property>
-        </item>
-        <item row="18" column="0">
-         <property name="text">
-          <string>6.01.01.02</string>
-         </property>
-        </item>
-        <item row="18" column="1">
-         <property name="text">
-          <string>Depreciação e Amortização</string>
-         </property>
-        </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Associe as colunas abaixo com as colunas dos seus dados</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="update_account_table">
+           <property name="maximumSize">
+            <size>
+             <width>801</width>
+             <height>541</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <attribute name="horizontalHeaderVisible">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderMinimumSectionSize">
+            <number>205</number>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>205</number>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>Balanço Patrimonial</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Demonstração do Resultado</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Fluxo de Caixa</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Código da Conta</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Descrição da Conta</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Alterar Código</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>Ativo</string>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>1.01</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string>Ativo Circulante</string>
+            </property>
+           </item>
+           <item row="1" column="2">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string>1.01.01</string>
+            </property>
+           </item>
+           <item row="2" column="1">
+            <property name="text">
+             <string>Caixa e Equivalente de Caixa</string>
+            </property>
+           </item>
+           <item row="3" column="0">
+            <property name="text">
+             <string>1.01.02</string>
+            </property>
+           </item>
+           <item row="3" column="1">
+            <property name="text">
+             <string>Aplicação Financeira</string>
+            </property>
+           </item>
+           <item row="4" column="0">
+            <property name="text">
+             <string>1.01.04</string>
+            </property>
+           </item>
+           <item row="4" column="1">
+            <property name="text">
+             <string>Estoque</string>
+            </property>
+           </item>
+           <item row="5" column="0">
+            <property name="text">
+             <string>1.02</string>
+            </property>
+           </item>
+           <item row="5" column="1">
+            <property name="text">
+             <string>Ativo Não Circulante</string>
+            </property>
+           </item>
+           <item row="6" column="0">
+            <property name="text">
+             <string>1.02.01</string>
+            </property>
+           </item>
+           <item row="6" column="1">
+            <property name="text">
+             <string>Ativo Realizável a Long Prazo</string>
+            </property>
+           </item>
+           <item row="7" column="0">
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item row="7" column="1">
+            <property name="text">
+             <string>Passivo</string>
+            </property>
+           </item>
+           <item row="7" column="2">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="8" column="0">
+            <property name="text">
+             <string>2.01</string>
+            </property>
+           </item>
+           <item row="8" column="1">
+            <property name="text">
+             <string>Passivo Circulante</string>
+            </property>
+           </item>
+           <item row="9" column="0">
+            <property name="text">
+             <string>2.01.04</string>
+            </property>
+           </item>
+           <item row="9" column="1">
+            <property name="text">
+             <string>Empréstimo a Curto Prazo</string>
+            </property>
+           </item>
+           <item row="10" column="0">
+            <property name="text">
+             <string>2.02</string>
+            </property>
+           </item>
+           <item row="10" column="1">
+            <property name="text">
+             <string>Passivo Não Circulante</string>
+            </property>
+           </item>
+           <item row="11" column="0">
+            <property name="text">
+             <string>2.02.01</string>
+            </property>
+           </item>
+           <item row="11" column="1">
+            <property name="text">
+             <string>Empréstimo a longo Prazo</string>
+            </property>
+           </item>
+           <item row="12" column="0">
+            <property name="text">
+             <string>2.03</string>
+            </property>
+           </item>
+           <item row="12" column="1">
+            <property name="text">
+             <string>Patrimônio Líquido</string>
+            </property>
+           </item>
+           <item row="13" column="0">
+            <property name="text">
+             <string>3.01</string>
+            </property>
+           </item>
+           <item row="13" column="1">
+            <property name="text">
+             <string>Receita Líquida</string>
+            </property>
+           </item>
+           <item row="14" column="0">
+            <property name="text">
+             <string>3.02</string>
+            </property>
+           </item>
+           <item row="14" column="1">
+            <property name="text">
+             <string>Custos</string>
+            </property>
+           </item>
+           <item row="15" column="0">
+            <property name="text">
+             <string>3.03</string>
+            </property>
+           </item>
+           <item row="15" column="1">
+            <property name="text">
+             <string>Lucro Bruto</string>
+            </property>
+           </item>
+           <item row="16" column="0">
+            <property name="text">
+             <string>3.05</string>
+            </property>
+           </item>
+           <item row="16" column="1">
+            <property name="text">
+             <string>Resultado Antes dos Tributos</string>
+            </property>
+           </item>
+           <item row="17" column="0">
+            <property name="text">
+             <string>3.08</string>
+            </property>
+           </item>
+           <item row="17" column="1">
+            <property name="text">
+             <string>Imposto de Renda e Contribuição Social Sobre o Lucro</string>
+            </property>
+           </item>
+           <item row="18" column="0">
+            <property name="text">
+             <string>6.01.01.02</string>
+            </property>
+           </item>
+           <item row="18" column="1">
+            <property name="text">
+             <string>Depreciação e Amortização</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
-      <widget class="QWidget" name="buttons_widget_update_column_page" native="true">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>70</y>
-         <width>801</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <widget class="QLabel" name="label_2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>1</y>
-          <width>330</width>
-          <height>18</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Associe as colunas abaixo com as colunas dos seus dados</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="top_frame_widget_update_column_page" native="true">
+      <widget class="QWidget" name="top_frame_widget_update_data_page" native="true">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -2468,7 +2461,7 @@ color: black;
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_6">
          <item>
-          <widget class="QLabel" name="title_page_update_column_page">
+          <widget class="QLabel" name="title_page_update_data_page">
            <property name="font">
             <font>
              <family>Arial Black</family>
@@ -2488,7 +2481,7 @@ color: black;
           </widget>
          </item>
          <item>
-          <spacer name="horizontalSpacer_update_column_page">
+          <spacer name="horizontalSpacer_update_data_page">
            <property name="orientation">
             <enum>Qt::Orientation::Horizontal</enum>
            </property>
@@ -2501,7 +2494,7 @@ color: black;
           </spacer>
          </item>
          <item>
-          <widget class="QLabel" name="file_name_label_update_column_page">
+          <widget class="QLabel" name="file_name_label_update_datat_page">
            <property name="font">
             <font>
              <pointsize>11</pointsize>
@@ -2523,7 +2516,383 @@ color: black;
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="e_exportation_page"/>
+    <widget class="QWidget" name="e_exportation_page">
+     <widget class="QWidget" name="upload_file_central_widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>801</width>
+        <height>741</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <widget class="QWidget" name="export_page_botton_frame" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>660</y>
+         <width>801</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <widget class="QWidget" name="layoutWidget_18">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>801</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="export_page_botton_frame_hLayout">
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <spacer name="export_page_horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>598</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="export_page_close_btn">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #34D481;
+	color:white;
+	border: none;
+	border-radius: 8px;
+	font-weight:bold;
+	font-size: 15px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Fechar</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="export_page_table" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>190</y>
+         <width>801</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <widget class="QTableWidget" name="export_table">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>801</width>
+          <height>471</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>32</number>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>110</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Column_1</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Column_2</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Column_3</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Column_4</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Column_5</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Column_6</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Column_7</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="upload_file_page_buttons_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>70</y>
+         <width>801</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <widget class="QWidget" name="layoutWidget_12">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>801</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Clique em exportar, para baixar o arquivo com os dados gerados.</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_10">
+             <item>
+              <widget class="QLabel" name="label_select_account_3">
+               <property name="minimumSize">
+                <size>
+                 <width>187</width>
+                 <height>17</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>187</width>
+                 <height>17</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 0, 0);</string>
+               </property>
+               <property name="text">
+                <string>.csv</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="upload_file_next_btn_2">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	background-color: #34D481;
+	color:white;
+	border: none;
+	border-radius: 8px;
+	font-weight:bold;
+	font-size: 15px;
+}</string>
+               </property>
+               <property name="text">
+                <string>Exportar</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="upload_file_page_top_frame_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>801</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <widget class="QWidget" name="layoutWidget_20">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>801</width>
+          <height>62</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="upload_file_page_horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="upload_file_page_title_2">
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>20</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Exportar Dados</string>
+           </property>
+           <property name="margin">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="upload_file_page_horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>348</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
    </widget>
   </widget>
  </widget>
@@ -2546,6 +2915,22 @@ color: black;
     <hint type="destinationlabel">
      <x>0</x>
      <y>722</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>export_page_close_btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>893</x>
+     <y>720</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>890</x>
+     <y>755</y>
     </hint>
    </hints>
   </connection>

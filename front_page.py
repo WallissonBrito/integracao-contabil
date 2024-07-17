@@ -8,6 +8,7 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)        
+        self.settings_page_btn.setChecked(True)
 
         # Variables    
         self.type_file = None
@@ -19,6 +20,7 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
         self.company = None
         self.cnpj = None
         self.data = None
+        self.new_data = None
         self.data_columns = None
         self.name_account_column = None
         self.name_descretion_account_column = None
@@ -39,7 +41,7 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
         # buttons
         self.choiced_type_file = self.save_btn_load_data_page.clicked.connect(self.save_settings)
         self.upload_file_next_btn.clicked.connect(self.get_selected_columns)
-        self.next_btn_update_data_page.clicked.connect(self.create_new_data)
+        self.next_btn_update_data_page.clicked.connect(self.load_new_data_into_table)
 
         # load file
         self.upload_file_btn.clicked.connect(self.load_data_into_table)
@@ -173,22 +175,30 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
         return new_data
 
     def load_new_data_into_table(self):
-        self.data = self.create_new_data()
-        # Read columns name
-        self.data_columns = self.data.columns
-        # Set coluns name to the table
-        self.upload_file_table.setColumnCount(len(self.data_columns))        
-        # Set columns name to the combobox
-        self.set_columns_to_combobox(self.data_columns)
+        self.new_data = self.create_new_data()
+        print(self.new_data)
 
-        # Set columns name into the table
-        self.upload_file_table.setHorizontalHeaderLabels(self.data_columns)
+        # Verifique se os dados estão sendo gerados corretamente
+        if self.new_data is None or self.new_data.empty:
+            print("No new data to load into the table.")
+            return
+
+        # Read columns name
+        data_columns = self.new_data.columns
+
+        # Set coluns name to the table
+        self.export_table.setColumnCount(len(data_columns))
+        self.export_table.setHorizontalHeaderLabels(data_columns)
+
+        # Clear the existing rows in the table
+        self.export_table.setRowCount(0)    
+
         # Insert data into the table
-        for row_index, row_data in self.data.iterrows():
-            self.upload_file_table.insertRow(row_index)
+        for row_index, row_data in self.new_data.iterrows():
+            self.export_table.insertRow(row_index)
             for col_index, cell_data in enumerate(row_data):
                 item = QTableWidgetItem(str(cell_data))
-                self.upload_file_table.setItem(row_index,col_index, item)
+                self.export_table.setItem(row_index, col_index, item)
         
         # Change page
         self.switch_to_exportation_page()
