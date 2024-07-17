@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1002</width>
+    <width>999</width>
     <height>769</height>
    </rect>
   </property>
@@ -409,7 +409,7 @@ color: black;
 </string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="a_settings_page">
      <property name="maximumSize">
@@ -740,7 +740,7 @@ color: black;
                 <string notr="true">color: rgb(0, 0, 0);</string>
                </property>
                <property name="text">
-                <string>Enconding</string>
+                <string>Encoding</string>
                </property>
               </widget>
              </item>
@@ -1461,9 +1461,9 @@ color: black;
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>170</y>
+         <y>270</y>
          <width>801</width>
-         <height>481</height>
+         <height>391</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -1475,7 +1475,7 @@ color: black;
           <x>0</x>
           <y>0</y>
           <width>801</width>
-          <height>481</height>
+          <height>431</height>
          </rect>
         </property>
         <attribute name="horizontalHeaderMinimumSectionSize">
@@ -1527,30 +1527,290 @@ color: black;
          <x>0</x>
          <y>70</y>
          <width>801</width>
-         <height>91</height>
+         <height>221</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true"/>
        </property>
+       <widget class="QWidget" name="layoutWidget_8">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>80</y>
+          <width>801</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Associe as colunas abaixo com as colunas dos seus dados</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="QLabel" name="label_select_account_2">
+               <property name="minimumSize">
+                <size>
+                 <width>187</width>
+                 <height>17</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>187</width>
+                 <height>17</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 0, 0);</string>
+               </property>
+               <property name="text">
+                <string>Conta</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_select_account_2">
+               <property name="minimumSize">
+                <size>
+                 <width>187</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>187</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
+	border:2px solid white;
+	border-radius: 8px;
+	padding:1px 18px 1px 3px;
+	background-color:black;
+	color:white;
+	height: 35px;
+	padding-left: 15px;
+	font-weight:bold;
+	selection-background-color:#2980B9;
+}</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>SELECIONE  A COLUNA</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_11">
+             <item>
+              <widget class="QLabel" name="label_select_desc_account_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>17</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>17</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 0, 0);</string>
+               </property>
+               <property name="text">
+                <string>Descrição da Conta</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_select_desc_account_2">
+               <property name="minimumSize">
+                <size>
+                 <width>187</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>187</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
+	border:2px solid white;
+	border-radius: 8px;
+	padding:1px 18px 1px 3px;
+	background-color:black;
+	color:white;
+	height: 35px;
+	padding-left: 15px;
+	font-weight:bold;
+	selection-background-color:#2980B9;
+}</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>SELECIONE A COLUNA</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="QLabel" name="label_select_value_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>17</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>17</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 0, 0);</string>
+               </property>
+               <property name="text">
+                <string> Valor</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_select_value_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
+	border:2px solid white;
+	border-radius: 8px;
+	padding:1px 18px 1px 3px;
+	background-color:black;
+	color:white;
+	height: 35px;
+	padding-left: 15px;
+	font-weight:bold;
+	selection-background-color:#2980B9;
+}</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>SELECIONE A COLUNA</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
        <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
           <width>344</width>
-          <height>81</height>
+          <height>76</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <property name="spacing">
-          <number>20</number>
+          <number>6</number>
          </property>
          <property name="leftMargin">
           <number>5</number>
          </property>
          <property name="topMargin">
           <number>7</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
          </property>
          <item>
           <widget class="QLabel" name="upload_file_page_label">
