@@ -19,14 +19,15 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QHBoxLayout, QHeaderView
     QLabel, QLineEdit, QMainWindow, QPushButton,
     QSizePolicy, QSpacerItem, QStackedWidget, QTableWidget,
     QTableWidgetItem, QVBoxLayout, QWidget)
-
+import resources_rc
+import resources_rc
 import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1002, 769)
+        MainWindow.resize(999, 769)
         MainWindow.setStyleSheet(u"QLineEdit{\n"
 "	border:1px solid gray;\n"
 "	border-radius: 6px;\n"
@@ -687,7 +688,7 @@ class Ui_MainWindow(object):
 
         self.upload_file_page_table = QWidget(self.upload_file_central_widget)
         self.upload_file_page_table.setObjectName(u"upload_file_page_table")
-        self.upload_file_page_table.setGeometry(QRect(0, 170, 801, 481))
+        self.upload_file_page_table.setGeometry(QRect(0, 270, 801, 391))
         self.upload_file_page_table.setStyleSheet(u"")
         self.upload_file_table = QTableWidget(self.upload_file_page_table)
         if (self.upload_file_table.columnCount() < 7):
@@ -707,20 +708,142 @@ class Ui_MainWindow(object):
         __qtablewidgetitem6 = QTableWidgetItem()
         self.upload_file_table.setHorizontalHeaderItem(6, __qtablewidgetitem6)
         self.upload_file_table.setObjectName(u"upload_file_table")
-        self.upload_file_table.setGeometry(QRect(0, 0, 801, 481))
+        self.upload_file_table.setGeometry(QRect(0, 0, 801, 431))
         self.upload_file_table.horizontalHeader().setMinimumSectionSize(32)
         self.upload_file_table.horizontalHeader().setDefaultSectionSize(110)
         self.upload_file_page_buttons = QWidget(self.upload_file_central_widget)
         self.upload_file_page_buttons.setObjectName(u"upload_file_page_buttons")
-        self.upload_file_page_buttons.setGeometry(QRect(0, 70, 801, 91))
+        self.upload_file_page_buttons.setGeometry(QRect(0, 70, 801, 221))
         self.upload_file_page_buttons.setStyleSheet(u"")
+        self.layoutWidget_8 = QWidget(self.upload_file_page_buttons)
+        self.layoutWidget_8.setObjectName(u"layoutWidget_8")
+        self.layoutWidget_8.setGeometry(QRect(0, 80, 801, 111))
+        self.verticalLayout_4 = QVBoxLayout(self.layoutWidget_8)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(5, 0, 0, 0)
+        self.label_3 = QLabel(self.layoutWidget_8)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setFont(font3)
+
+        self.verticalLayout_4.addWidget(self.label_3)
+
+        self.horizontalLayout_7 = QHBoxLayout()
+        self.horizontalLayout_7.setSpacing(6)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.horizontalLayout_7.setContentsMargins(5, 10, 0, 10)
+        self.verticalLayout_8 = QVBoxLayout()
+        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
+        self.label_select_account = QLabel(self.layoutWidget_8)
+        self.label_select_account.setObjectName(u"label_select_account_2")
+        self.label_select_account.setMinimumSize(QSize(187, 17))
+        self.label_select_account.setMaximumSize(QSize(187, 17))
+        self.label_select_account.setFont(font4)
+        self.label_select_account.setStyleSheet(u"color: rgb(0, 0, 0);")
+
+        self.verticalLayout_8.addWidget(self.label_select_account)
+
+        self.comboBox_select_account = QComboBox(self.layoutWidget_8)
+        self.comboBox_select_account.addItem("")
+        self.comboBox_select_account.setObjectName(u"comboBox_select_account_2")
+        self.comboBox_select_account.setMinimumSize(QSize(187, 35))
+        self.comboBox_select_account.setMaximumSize(QSize(187, 35))
+        self.comboBox_select_account.setStyleSheet(u"QComboBox{\n"
+"	border:2px solid white;\n"
+"	border-radius: 8px;\n"
+"	padding:1px 18px 1px 3px;\n"
+"	background-color:black;\n"
+"	color:white;\n"
+"	height: 35px;\n"
+"	padding-left: 15px;\n"
+"	font-weight:bold;\n"
+"	selection-background-color:#2980B9;\n"
+"}")
+
+        self.verticalLayout_8.addWidget(self.comboBox_select_account)
+
+
+        self.horizontalLayout_7.addLayout(self.verticalLayout_8)
+
+        self.verticalLayout_11 = QVBoxLayout()
+        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
+        self.label_select_desc_account = QLabel(self.layoutWidget_8)
+        self.label_select_desc_account.setObjectName(u"label_select_desc_account_2")
+        self.label_select_desc_account.setMinimumSize(QSize(0, 17))
+        self.label_select_desc_account.setMaximumSize(QSize(16777215, 17))
+        self.label_select_desc_account.setFont(font4)
+        self.label_select_desc_account.setStyleSheet(u"color: rgb(0, 0, 0);")
+
+        self.verticalLayout_11.addWidget(self.label_select_desc_account)
+
+        self.comboBox_select_desc_account = QComboBox(self.layoutWidget_8)
+        self.comboBox_select_desc_account.addItem("")
+        self.comboBox_select_desc_account.setObjectName(u"comboBox_select_desc_account_2")
+        self.comboBox_select_desc_account.setMinimumSize(QSize(187, 35))
+        self.comboBox_select_desc_account.setMaximumSize(QSize(187, 35))
+        self.comboBox_select_desc_account.setStyleSheet(u"QComboBox{\n"
+"	border:2px solid white;\n"
+"	border-radius: 8px;\n"
+"	padding:1px 18px 1px 3px;\n"
+"	background-color:black;\n"
+"	color:white;\n"
+"	height: 35px;\n"
+"	padding-left: 15px;\n"
+"	font-weight:bold;\n"
+"	selection-background-color:#2980B9;\n"
+"}")
+
+        self.verticalLayout_11.addWidget(self.comboBox_select_desc_account)
+
+
+        self.horizontalLayout_7.addLayout(self.verticalLayout_11)
+
+        self.verticalLayout_9 = QVBoxLayout()
+        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+        self.label_select_value = QLabel(self.layoutWidget_8)
+        self.label_select_value.setObjectName(u"label_select_value_2")
+        self.label_select_value.setMinimumSize(QSize(0, 17))
+        self.label_select_value.setMaximumSize(QSize(16777215, 17))
+        self.label_select_value.setFont(font4)
+        self.label_select_value.setStyleSheet(u"color: rgb(0, 0, 0);")
+
+        self.verticalLayout_9.addWidget(self.label_select_value)
+
+        self.comboBox_select_value = QComboBox(self.layoutWidget_8)
+        self.comboBox_select_value.addItem("")
+        self.comboBox_select_value.setObjectName(u"comboBox_select_value_2")
+        self.comboBox_select_value.setMinimumSize(QSize(0, 35))
+        self.comboBox_select_value.setMaximumSize(QSize(16777215, 35))
+        self.comboBox_select_value.setStyleSheet(u"QComboBox{\n"
+"	border:2px solid white;\n"
+"	border-radius: 8px;\n"
+"	padding:1px 18px 1px 3px;\n"
+"	background-color:black;\n"
+"	color:white;\n"
+"	height: 35px;\n"
+"	padding-left: 15px;\n"
+"	font-weight:bold;\n"
+"	selection-background-color:#2980B9;\n"
+"}")
+
+        self.verticalLayout_9.addWidget(self.comboBox_select_value)
+
+
+        self.horizontalLayout_7.addLayout(self.verticalLayout_9)
+
+        self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout_7.addItem(self.horizontalSpacer_6)
+
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout_7)
+
         self.widget3 = QWidget(self.upload_file_page_buttons)
         self.widget3.setObjectName(u"widget3")
-        self.widget3.setGeometry(QRect(0, 0, 344, 81))
+        self.widget3.setGeometry(QRect(0, 0, 344, 76))
         self.verticalLayout_3 = QVBoxLayout(self.widget3)
-        self.verticalLayout_3.setSpacing(20)
+        self.verticalLayout_3.setSpacing(6)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.verticalLayout_3.setContentsMargins(5, 7, 0, 0)
+        self.verticalLayout_3.setContentsMargins(5, 7, 0, 10)
         self.upload_file_page_label = QLabel(self.widget3)
         self.upload_file_page_label.setObjectName(u"upload_file_page_label")
         self.upload_file_page_label.setFont(font3)
@@ -1004,6 +1127,7 @@ class Ui_MainWindow(object):
         self.exit_btn.toggled.connect(MainWindow.close)
 
         self.stackedWidget.setCurrentIndex(0)
+        self.settings_page_btn.setChecked(True)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1027,7 +1151,7 @@ class Ui_MainWindow(object):
         self.delimiter_comboBox_file.setItemText(0, QCoreApplication.translate("MainWindow", u"V\u00edrgula", None))
         self.delimiter_comboBox_file.setItemText(1, QCoreApplication.translate("MainWindow", u"Ponto e V\u00edrgula", None))
 
-        self.encoding_label.setText(QCoreApplication.translate("MainWindow", u"Enconding", None))
+        self.encoding_label.setText(QCoreApplication.translate("MainWindow", u"Encoding", None))
         self.encoding_comboBox_file.setItemText(0, QCoreApplication.translate("MainWindow", u"UTF-8", None))
         self.encoding_comboBox_file.setItemText(1, QCoreApplication.translate("MainWindow", u" ISO-8859-1", None))
 
@@ -1074,6 +1198,16 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Column_6", None));
         ___qtablewidgetitem6 = self.upload_file_table.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Column_7", None));
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Associe as colunas abaixo com as colunas dos seus dados", None))
+        self.label_select_account.setText(QCoreApplication.translate("MainWindow", u"Conta", None))
+        self.comboBox_select_account.setItemText(0, QCoreApplication.translate("MainWindow", u"SELECIONE  A COLUNA", None))
+
+        self.label_select_desc_account.setText(QCoreApplication.translate("MainWindow", u"Descri\u00e7\u00e3o da Conta", None))
+        self.comboBox_select_desc_account.setItemText(0, QCoreApplication.translate("MainWindow", u"SELECIONE A COLUNA", None))
+
+        self.label_select_value.setText(QCoreApplication.translate("MainWindow", u" Valor", None))
+        self.comboBox_select_value.setItemText(0, QCoreApplication.translate("MainWindow", u"SELECIONE A COLUNA", None))
+
         self.upload_file_page_label.setText(QCoreApplication.translate("MainWindow", u"Click em inserir para carregar o arquivo e visualize a tabela.", None))
         self.upload_file_btn.setText(QCoreApplication.translate("MainWindow", u"Inserir ", None))
         self.upload_file_page_title.setText(QCoreApplication.translate("MainWindow", u"Carregar Arquivo", None))
