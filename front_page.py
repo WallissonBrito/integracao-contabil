@@ -8,15 +8,8 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)        
-        self.settings_page_btn.setChecked(True)
 
-        # Switch pages
-        self.settings_page_btn.clicked.connect(self.switch_to_setting_page)
-        self.load_file_page_btn.clicked.connect(self.switch_to_load_file_page)
-        self.update_data_page_btn.clicked.connect(self.switch_to_update_data_page)
-        self.exportation_page_btn.clicked.connect(self.switch_to_exportation_page)
-
-        # Variable to store the settings value    
+        # Variables    
         self.type_file = None
         self.delimiter_data = None
         self.encoding_data = None
@@ -25,14 +18,27 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
         self.year = None
         self.company = None
         self.cnpj = None
+        self.data = None
+        self.data_columns = None
+        self.name_account_column = None
+        self.name_descretion_account_column = None
+        self.name_value_column = None
 
-        # Settings
+        # Switch pages
+        self.settings_page_btn.clicked.connect(self.switch_to_setting_page)
+        self.load_file_page_btn.clicked.connect(self.switch_to_load_file_page)
+        self.update_data_page_btn.clicked.connect(self.switch_to_update_data_page)
+        self.exportation_page_btn.clicked.connect(self.switch_to_exportation_page)
+
+
+        # buttons
         self.choiced_type_file = self.save_btn_load_data_page.clicked.connect(self.save_settings)
+        self.upload_file_next_btn.clicked.connect(self.get_selected_columns)
 
         # load file
         self.upload_file_btn.clicked.connect(self.load_data_into_table)
 
-
+    # Save selected settings
     def save_settings(self):
         self.type_file = self.type_file_comboBox.currentText()
         self.delimiter_data = self.delimiter_comboBox_file.currentText()
@@ -71,30 +77,46 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
             data = pd.read_csv(file_path, sep=str(delimiter_data), encoding=selected_encoding )             
             return data
 
-    def load_data_into_table(self):
+    def set_columns_to_combobox(self, columns):
+        for column in columns:
+            self.comboBox_select_account.addItem(column)
+            self.comboBox_select_desc_account.addItem(column)
+            self.comboBox_select_value.addItem(column)
 
-        data = self.load_file()
+    def get_selected_columns(self):
+        self.name_account_column = self.comboBox_select_account.currentText()
+        self.name_descretion_account_column = self.comboBox_select_desc_account.currentText()
+        self.name_value_column = self.comboBox_select_value.currentText()
+
+ 
+
+
+    def load_data_into_table(self):
+        self.data = self.load_file()
         # Read columns name
-        columns = data.columns
-        self.upload_file_table.setColumnCount(len(columns))
+        self.data_columns = self.data.columns
+        # Set coluns name to the table
+        self.upload_file_table.setColumnCount(len(self.data_columns))        
+        # Set columns name to the combobox
+        self.set_columns_to_combobox(self.data_columns)
 
         # Set columns name into the table
-        self.upload_file_table.setHorizontalHeaderLabels(columns)
+        self.upload_file_table.setHorizontalHeaderLabels(self.data_columns)
         # Insert data into the table
-        for row_index, row_data in data.iterrows():
+        for row_index, row_data in self.data.iterrows():
             self.upload_file_table.insertRow(row_index)
             for col_index, cell_data in enumerate(row_data):
                 item = QTableWidgetItem(str(cell_data))
                 self.upload_file_table.setItem(row_index,col_index, item)
 
-    def set_account_name(self):
-        data = self.load_file()
-        columns = data.columns
-        print(columns)
+    # def set_account_name(self):
+    #     data = self.load_file()
+    #     columns = data.columns
+    #     print(columns)
 
-    def add_data_update_colums_page(self):
-        # self.switch_to_update_column_page()
-        self.set_account_name()
+    # def add_data_update_colums_page(self):
+    #     # self.switch_to_update_column_page()
+    #     self.set_account_name()
 
     def switch_to_setting_page(self):
         self.stackedWidget.setCurrentIndex(0)
