@@ -1276,7 +1276,7 @@ class Ui_MainWindow(object):
         self.exit_btn.toggled.connect(MainWindow.close)
         self.export_page_close_btn.toggled.connect(MainWindow.close)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)

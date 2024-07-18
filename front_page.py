@@ -31,6 +31,10 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
             '1','1.01','1.01.01', '1.01.02', '1.01.04', '1.02', '1.02.01', '2', '2.01',
             '2.01.04', '2.02', '2.02.01', '2.03', '3.01', '3.02', '3.03', '3.05', '3.08', '6.01.01.02'
         ]
+        self.ACCOUNT_BALANCE_SHEET_ASSETS = ['1','1.01','1.01.01', '1.01.02', '1.01.04', '1.02', '1.02.01']
+        self.ACCOUNT_BALANCE_SHEET_LIABILITIES = ['2', '2.01', '2.01.04', '2.02', '2.02.01', '2.03']
+        self.ACCOUNT_RESULTS = ['3.01', '3.02', '3.03', '3.05', '3.08']        
+        self.CASH_FLOW = ['6.01.01.02'] 
 
         # Switch pages
         self.settings_page_btn.clicked.connect(self.switch_to_setting_page)
@@ -152,6 +156,7 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
             
     def read_combobox_values(self):
         combobox_values = [comboBox.currentText() for comboBox in self.combo_boxes]
+        print(combobox_values)
         return combobox_values
 
     def update_account_value(self):
@@ -167,43 +172,82 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
         
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 # /////////// EXPORTATION DATA PAGE  /////////////////////////////////////////////////////////////////////////////
+    def create_statement_column(self, data):
+        data = data.copy()
+        # Create column
+        data['DEMONSTRATIVO'] = ""
+
+        # Verify account 
+        is_balance_sheet_assets = data.loc[:,self.name_account_column].isin(self.ACCOUNT_BALANCE_SHEET_ASSETS)
+        is_balance_sheet_liabilities = data.loc[:,self.name_account_column].isin(self.ACCOUNT_BALANCE_SHEET_LIABILITIES)
+        is_results = data.loc[:,self.name_account_column].isin(self.ACCOUNT_RESULTS)
+        is_cashflow = data.loc[:,self.name_account_column].isin(self.CASH_FLOW)
+
+        # Create the column
+        data.loc[is_balance_sheet_assets, 'DEMONSTRATIVO'] = 'Balanço Patrimonial Ativo'
+        data.loc[is_balance_sheet_liabilities, 'DEMONSTRATIVO'] = 'Balanço Patrimonial Passivo'
+        data.loc[is_results, 'DEMONSTRATIVO'] = 'Demonstração do Resultado'
+        data.loc[is_cashflow, 'DEMONSTRATIVO'] = 'Demonstração do Fluxo de Caixa' 
+        
+        return data
+
     def create_new_data(self):
         # update account values 
-        data = self.update_account_value()
-        # Filtering only account was changed
-        new_data = data.loc[data[self.name_account_column].isin(self.ACCOUNT_LIST)]
+        new_data = self.update_account_value()
+        # copy new_data
+        new_data = new_data.copy()
+        # Filtering only accounts that have been changed
+        new_data = new_data.loc[new_data[self.name_account_column].isin(self.ACCOUNT_LIST)]
+
+        # Add data
+        new_data.loc[:,'CNPJ'] = self.cnpj    
+        new_data.loc[:,'EMPRESA'] = self.company
+        new_data.loc[:,'ANO'] = self.year
+        new_data.loc[:,'MES'] = self.choiced_moth
+        new_data.loc[:,'PERIODO'] = self.choiced_period.upper()
+        new_data = self.create_statement_column(new_data)
+
+        # Filtering columns 
+        new_data = new_data[['CNPJ', 'EMPRESA', self.name_account_column, 
+                             self.name_descretion_account_column, self.name_value_column, 'DEMONSTRATIVO', 'ANO', 'MES', 'PERIODO']]
+
+        # Update name`s column `
+        columns_name = ['CNPJ', 'EMPRESA', 'CONTA', 'DESCRIÇÃO', 'VALOR', 'DEMONSTRATIVO', 'ANO', 'MES', 'PERIODO']
+        new_data.columns = columns_name
+
+        new_data.reset_index(inplace=True, drop=True)
         return new_data
 
     def load_new_data_into_table(self):
-        self.new_data = self.create_new_data()
-        print(self.new_data)
+        new_data = self.create_new_data()
 
         # Verifique se os dados estão sendo gerados corretamente
-        if self.new_data is None or self.new_data.empty:
+        if new_data is None or new_data.empty:
             print("No new data to load into the table.")
-            return
-
+            return  # Exit the function if there is no data
+        # else:
+        #     print(new_data)
+        #     print("Dados gerados")
+        
         # Read columns name
-        data_columns = self.new_data.columns
+        new_data_columns = new_data.columns
 
         # Set coluns name to the table
-        self.export_table.setColumnCount(len(data_columns))
-        self.export_table.setHorizontalHeaderLabels(data_columns)
+        self.export_table.setColumnCount(len(new_data_columns))
+        self.export_table.setHorizontalHeaderLabels(new_data_columns)
 
         # Clear the existing rows in the table
         self.export_table.setRowCount(0)    
 
         # Insert data into the table
-        for row_index, row_data in self.new_data.iterrows():
+        for row_index, row_data in new_data.iterrows():
             self.export_table.insertRow(row_index)
             for col_index, cell_data in enumerate(row_data):
                 item = QTableWidgetItem(str(cell_data))
                 self.export_table.setItem(row_index, col_index, item)
-        
+            
         # Change page
         self.switch_to_exportation_page()
-
-
 
     def switch_to_setting_page(self):
         self.stackedWidget.setCurrentIndex(0)
