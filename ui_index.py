@@ -27,7 +27,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(999, 769)
+        MainWindow.resize(999, 750)
         MainWindow.setStyleSheet(u"QLineEdit{\n"
 "	border:1px solid gray;\n"
 "	border-radius: 6px;\n"
@@ -1114,16 +1114,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_6.addItem(self.horizontalSpacer_update_data_page)
 
-        self.file_name_label_update_datat_page = QLabel(self.layoutWidget_6)
-        self.file_name_label_update_datat_page.setObjectName(u"file_name_label_update_datat_page")
-        font7 = QFont()
-        font7.setPointSize(11)
-        self.file_name_label_update_datat_page.setFont(font7)
-        self.file_name_label_update_datat_page.setStyleSheet(u"color: rgb(0, 0, 0);")
-        self.file_name_label_update_datat_page.setMargin(20)
-
-        self.horizontalLayout_6.addWidget(self.file_name_label_update_datat_page)
-
         self.stackedWidget.addWidget(self.c_update_data_page)
         self.e_exportation_page = QWidget()
         self.e_exportation_page.setObjectName(u"e_exportation_page")
@@ -1160,6 +1150,7 @@ class Ui_MainWindow(object):
 "	font-weight:bold;\n"
 "	font-size: 15px;\n"
 "}")
+        self.export_page_close_btn.setCheckable(True)
 
         self.export_page_botton_frame_hLayout.addWidget(self.export_page_close_btn)
 
@@ -1456,7 +1447,6 @@ class Ui_MainWindow(object):
         self.update_account_table.setSortingEnabled(__sortingEnabled)
 
         self.title_page_update_data_page.setText(QCoreApplication.translate("MainWindow", u"Alterar Dados", None))
-        self.file_name_label_update_datat_page.setText(QCoreApplication.translate("MainWindow", u"arquivo.csv", None))
         self.export_page_close_btn.setText(QCoreApplication.translate("MainWindow", u"Fechar", None))
         ___qtablewidgetitem51 = self.export_table.horizontalHeaderItem(0)
         ___qtablewidgetitem51.setText(QCoreApplication.translate("MainWindow", u"Column_1", None));

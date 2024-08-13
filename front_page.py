@@ -47,6 +47,7 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
         self.upload_file_next_btn.clicked.connect(self.get_selected_columns)
         self.next_btn_update_data_page.clicked.connect(self.load_new_data_into_table)
 
+
         # load file
         self.upload_file_btn.clicked.connect(self.load_data_into_table)
 
